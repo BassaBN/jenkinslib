@@ -10,10 +10,8 @@ pipeline {
         stage('Non-Parallel Stage') {
             steps {
                 script{
-                    
-                tools.PrintMes("This is My GitHub Lib~~")
-                
-                }
+                    tools.PrintMes("This is My GitHub Lib~~",'green')
+                 }
             }
         }
         stage('Parallel Stage') {
@@ -24,12 +22,16 @@ pipeline {
             parallel {
                 stage('Branch A') {
                     steps {
-                        echo "On Branch A"
+                        script{
+                            tools.PrintMes("Branch A~~",'blue')
+                         }
                     }
                 }
                 stage('Branch B') {
                     steps {
-                        echo "On Branch B"
+                        script{
+                            tools.PrintMes("Branch B~~",'red')
+                         }
                     }
                 }
             }
