@@ -2,7 +2,7 @@
 
 @Library('githublib') _
 
-def tools = new org.devops.demo()
+def tools = new org.devops.tools()
 
 pipeline {
     agent any
