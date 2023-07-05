@@ -1,6 +1,7 @@
 #!groovy
 
-@Library('GitHubLib') _
+@Library('githublib') _
+
 def tools = new org.devops.demo()
 
 pipeline {
@@ -8,7 +9,11 @@ pipeline {
     stages {
         stage('Non-Parallel Stage') {
             steps {
+                script{
+                    
                 tools.PrintMsg("This is My GitHub Lib~~")
+                
+                }
             }
         }
         stage('Parallel Stage') {
