@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script{
                     
-                tools.PrintMsg("This is My GitHub Lib~~")
+                tools.PrintMes("This is My GitHub Lib~~")
                 
                 }
             }
